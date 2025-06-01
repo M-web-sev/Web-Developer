@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      background: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 28px;
+    }
+
+    .contact {
+      width: 100%;
+      padding: 60px 20px;
+      background: #e0f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contact-content {
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .contact-content h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .contact-content p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .contact-info p {
+      font-size: 16px;
+      color: #666;
+      margin: 10px 0;
+    }
+
+    .contact-info a {
+      color: #00796b;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .social-links {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      font-size: 16px;
+      color: white;
+      background: #00796b;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .social-links a:hover {
+      background: #004d40;
+    }
+
+    .back-home, .view-demo {
+      display: block;
+      margin: 40px auto 0;
+      padding: 12px 24px;
+      background: linear-gradient(45deg, #3498db, #8e44ad);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 18px;
+      width: 220px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+
+    .back-home:hover {
+      background: linear-gradient(45deg, #2980b9, #8e44ad);
+    }
+
+    .view-demo {
+      background: #27ae60;
+    }
+
+    .view-demo:hover {
+      background: #2ecc71;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 78px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .contact-content h2 {
+        font-size: 32px;
+      }
+
+      .contact-content p,
+      .contact-info p {
+        font-size: 16px;
+      }
+
+      .social-links a {
+        font-size: 15px;
+        padding: 8px 16px;
+      }
+
+      .back-home, .view-demo {
+        width: 90%;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-content h2 {
+        font-size: 28px;
+      }
+
+      .social-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    My Work Portfolio
+  </header>
+
+  <section class="contact" id="contact">
+    <div class="contact-content">
+      <h2>Contact Me</h2>
+      <p>If you want to work with me or have any questions, feel free to get in touch!</p>
+
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:alifreelancer919@gmail.com">alifreelancer919@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="https://wa.me/923077249195">+92 307 7249195</a></p>
+      </div>
+
+      <div class="social-links">
+        <a href="https://facebook.com/yourprofile" target="_blank" title="Facebook Profile">Facebook</a>
+        <a href="https://instagram.com/yourprofile" target="_blank" title="Instagram Profile">Instagram</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn Profile">LinkedIn</a>
+        <a href="https://t.me/yourtelegramusername" target="_blank" title="Telegram Channel">Telegram</a>
+        <a href="https://youtube.com/@LearnToEarn-money" target="_blank" title="Youtube Channel">YouTube</a>
+        <a href="https://wa.me/923077249195"target="blank"><img src="whatsapp-icon.png" alt="WhatsApp" width="50px"></a>
+      </div>
+
+    </div>
+    
+  </section>
+
+  <a href="index.html" class="back-home">← Back to Home</a>
+
+  <footer>
+    <p>&copy; 2025 My Portfolio | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

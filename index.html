@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Portfolio with JS Effects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7f7f7;
+      overflow-x: hidden;
+    }
+    @media (max-width: 768px) {
+      nav {
+        height: 10px; /* کم height چھوٹی screen پر */
+      }
+
+      nav {
+        font-size: 3.4vw;
+      }
+    }
+    @media (max-width: 300px) {
+      nav {
+        height: 5vh; /* کم height چھوٹی screen پر */
+      }
+
+      nav {
+        font-size: 4vw;
+      }
+    }
+    @media (max-width: 300px) {
+      .logo{
+        font-size: 2vw;
+      }
+    }
+    nav {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    }
+    nav .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: #d2691e;
+    }
+    nav .nav-links a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 2.3s;
+    }
+    nav .nav-links a:hover { color: #d2691e; }
+    
+    .section h2 {
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 50px;
+      color: #2d3e50;
+      opacity: 0;
+      animation: fadeIn 2s forwards 0.5s;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      transition: 0.3s ease-in-out;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 25px;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #5b8baf;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 15px;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #2d3e50;
+    }
+    footer {
+      background-color: #2d3e50;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+    .parallax {
+      background-image: url('https://source.unsplash.com/1600x900/?nature');
+      height: 500px;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    .skill-bar {
+      background: #ddd;
+      border-radius: 50px;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+    .skill-bar-fill {
+      background: #5b8baf;
+      height: 20px;
+      width: 0;
+      transition: width 3s ease;
+    }
+    footer p {
+      font-size: 0.9em;
+    }
+    .hero-section {
+      position: relative;
+      background-image: url('Dev.jpg'); /* یہاں اپنی تصویر کا لنک لگاؤ */
+      background-size: cover;
+      background-position: center;
+      height: 700px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-section::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100% ; height: 100%;
+      background: linear-gradient(to right, rgba(0, 0, 0, 1.5), rgba(0, 0, 0,0.0)); /* تصویر پر تھوڑا سا سیاہ پردہ */
+
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      font-size: 2rem;
+    }
+
+ /* ✅ Responsive for small screens */
+    @media (max-width: 768px) {
+      .hero-section {
+        height: 40vh; /* کم height چھوٹی screen پر */
+      }
+
+      .hero-text {
+        font-size: 3vw;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-section {
+        height: 30vh;
+      }
+      @media (max-width: 280px) {
+      .hero-section {
+        height: 28vh;
+      }
+
+      .hero-text {
+        font-size: 6\2vw;
+      }
+    }  
+  } 
+    .hy{
+      color: red;
+    } 
+    .hy:hover{
+      color: blue;
+    }
+    
+    .box{
+     background-color: green;
+     border: 4px solid red;
+     border-radius: 50%;
+     height: 120px;
+     width: 120px;
+     text-align: center;
+justify-content:center ;
+display: flex;
+justify-content: center;
+      position: fixed;
+      bottom: 5px;
+      right: 5px;
+    }
+  
+    .ank{
+    color: black;
+    font-weight: bolder;
+    font-size: 17px;
+padding: 30px;
+
+      }
+       .ank:hover{
+        color: rgb(202, 202, 207);
+        cursor: pointer;
+        font-size: 19px;
+        padding-bottom: 5px;
+      }
+      .image{
+       padding-bottom: 17vh;
+      }
+  </style>
+
+</head>
+<body>
+  <nav>
+    <div class="logo">Webstera</div>
+    <div class="nav-links">
+      <a href="index5.html">About us</a>
+      <a href="index4.html">Contact us</a>
+      <a href="index7.html">Projects</a>
+      <a href="index3.html">Skills</a>
+      <a href="index2.html">Websites</a>
+      <a href="index1.html">Graphics</a>
+    </div>
+  </nav>
+
+<section class="hero-section">
+  <div class="hero-text">
+    <h1>Welcome to My Portfolio</h1>
+    <pre>Hy I am <strong>Muhammad  Ahmad</strong>.
+ Visit: <a href="index7.html" class="hy">About me</a>  Page to Know about me.
+         </pre>
+         
+  </div>
+  
+</section>
+
+<section class="section" id="projects">
+  <h2>My Projects</h2>
+  <div class="cards">
+    <div class="card">
+             
+      <div class="card-content">
+        <h3>Business Website</h3>
+        <p>Custom websites for business ventures.</p>
+        <a href="index2.html" class="btn">View Project</a>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-content">
+
+        <h3>Branding & Design</h3>
+        <p>Unique branding for startups.</p>
+        <a href="index1.html" class="btn">View Project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section parallax" id="skills">
+  <h2>My Skills</h2>
+  <div class="skill-bar">
+    <div class="skill-bar-fill" style="width: 99%;"></div>
+  </div>
+  <h3>Web Development</h3>
+  <div class="skill-bar">
+    <div class="skill-bar-fill" style="width: 85%;"></div>
+  </div>
+  <h3>Graphic Design</h3>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact Me</h2>
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button class="btn">Send Message</button>
+  </form>
+</section>
+ <div class="container">
+   <div class="box">
+     <a href="https://wa.me/923077249195" class="ank">Chat with us</a>
+    </div>
+ </div>
+<footer>
+  <p>&copy; 2025 My Portfolio | All Rights Reserved</p>
+</footer>
+
+<script>
+  // Example of animating skill bars
+  window.onload = () => {
+    document.querySelectorAll('.skill-bar-fill').forEach(skill => {
+      let width = skill.style.width;
+      setTimeout(() => {
+        skill.style.width = width;
+      }, 200);
+    });
+  };
+</script>
+
+</body>
+</html>

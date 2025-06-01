@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+      background: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 28px;
+    }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            padding: 0 20px;
+        }
+        .card {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card h2 {
+            font-size: 24px;
+            color: #333;
+        }
+        .card p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .back-home {
+      display: block;
+      text-align: center;
+      margin: 40px auto 0;
+    }
+    .back-home a {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+    .back-home {
+      display: block;
+      margin: 50px auto 0;
+      padding: 12px 24px;
+      background: linear-gradient(45deg, #3498db, #8e44ad);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 18px;
+      width: 220px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+    .back-home:hover {
+      background: linear-gradient(45deg, #2980b9, #8e44ad);
+    }
+    .view-demo {
+      display: block;
+      margin: 15px auto;
+      padding: 12px 24px;
+      background: #27ae60;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 18px;
+      width: 220px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+    .view-demo:hover {
+      background: #2ecc71;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        My Work Portfolio
+      </header>
+<div class="container">
+    <div class="card">
+        <h2>WEB DEVELOPMENT</h2>
+        <p>Click here to know about my WEB DEVELOPMENT projects.</p>
+        <a href="index2.html" class="btn">View Project</a>
+    </div>
+    <div class="card">
+        <h2>BRANDING AND DESIGNS</h2>
+        <p>Click here to know about my BRANDING AND DESIGNS projects.</p>
+        <a href="index1.html" class="btn">View Project</a>
+    </div>
+</div>
+<a href="index.html" class="back-home">← Back to Home</a>
+<footer>
+    <p>&copy; 2025 My Portfolio | All Rights Reserved</p>
+  </footer>
+  
+</body>
+</html>
+ 

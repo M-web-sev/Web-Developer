@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Full Screen Profile Card</title>
+ <style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body, html {
+    height: 100%;
+    background: linear-gradient(to right, #667eea, #764ba2);
+  }
+  
+  .card {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .card-content {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  }
+  
+  .profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 1rem;
+    border: 4px solid #764ba2;
+  }
+  
+  .card-content h2 {
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-content p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .profile-img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .card-content p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .profile-img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .card-content h2 {
+      font-size: 1.2rem;
+    }
+  
+    .card-content p {
+      font-size: 0.85rem;
+    }
+  }
+  .back-home {
+    margin-bottom: 4px;
+      display: block;
+      margin: 50px auto 0;
+      padding: 12px 24px;
+      background: linear-gradient(45deg, #7aa2be, #258070);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 18px;
+      width: 220px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+    .back-home:hover {
+      background: linear-gradient(48deg, #0ca033, #ac3c8b);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-content">
+      <img src="mypic.png" alt="Profile Picture" class="profile-img" />
+      <h2>Muhammad Ahmad</h2>
+      <p>I am a professional WEB Developer.Feel Free to contact me on WhatsApp or Email or Fiverr and upwork visit contact us page </p>
+    </div>
+  </div>
+  <a href="index.html" class="back-home">← Back to Home</a>
+
+</body>
+</html>
